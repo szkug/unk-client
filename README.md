@@ -1,2 +1,2 @@
-# ketting-client
-A metting tool build with kmp.
+# keeting-client
+A meeting tool build with kmp.
