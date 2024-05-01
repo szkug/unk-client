@@ -1,0 +1,39 @@
+[versions]
+# Kotlin
+kotlin = "1.9.23"
+coroutines = "1.8.0"
+
+# Android
+agp = "8.2.0"
+androidx-appcompat = "1.6.1"
+
+# Compose
+compose = "1.5.13"
+compose-android-bom = "2024.04.01"
+compose-android-activity = "1.8.2"
+
+[libraries]
+# Kotlin
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Compose
+compose-android-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-android-bom" }
+compose-material3 = { group = "org.jetbrains.compose.material3", name = "material3-desktop", version.ref = "compose" }
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-android-activity" }
+
+# Android
+agp = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
+[bundles]
