@@ -1,3 +1,12 @@
+dependencyResolutionManagement {
+    versionCatalogs {
+        versionCatalogs {
+            create("krpcLibs") {
+                from(files("krpc-wire-plugin/gradle/libs.versions.toml"))
+            }
+        }
+    }
+}
 
 
 pluginManagement {
@@ -22,5 +31,13 @@ rootProject.name = "ketting-client"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 // build logic
+includeBuild("builds")
+includeBuild("krpc-wire-plugin") {
+    dependencySubstitution {
+        substitute(module("org.szkug.krpc:schema")).using(project(":wire-schema"))
+    }
+}
+
 
 // module include
+include("libs:network")

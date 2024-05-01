@@ -1,0 +1,8 @@
+[submodule "krpc-wire-plugin"]
+	path = krpc-wire-plugin
+	url = https://github.com/szkug/krpc-wire-plugin.git
+	branch = dev/keeting
+[submodule "protocol"]
+	path = protocol
+	url = https://github.com/szkug/keeting-protocol.git
+	branch = main

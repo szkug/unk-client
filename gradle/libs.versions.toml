@@ -12,6 +12,9 @@ compose = "1.5.13"
 compose-android-bom = "2024.04.01"
 compose-android-activity = "1.8.2"
 
+
+ktor = "2.3.7"
+
 [libraries]
 # Kotlin
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
@@ -26,6 +29,11 @@ compose-activity = { group = "androidx.activity", name = "activity-compose", ver
 agp = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
 
+# Ktor
+ktor-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-loging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
