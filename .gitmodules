@@ -5,4 +5,4 @@
 [submodule "protocol"]
 	path = protocol
 	url = https://github.com/szkug/keeting-protocol.git
-	branch = main
+	branch = dev

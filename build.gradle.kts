@@ -11,7 +11,7 @@ plugins {
     alias(libs.plugins.android.application) apply false
 }
 
-group = "org.szkug.ketting"
+group = "org.szkug.keeting"
 version = "1.0.0-SNAPSHOT"
 
 repositories {

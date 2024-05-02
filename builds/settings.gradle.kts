@@ -16,4 +16,4 @@ pluginManagement {
 // gradle feature
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-include("wire-schema")
+include("properties")

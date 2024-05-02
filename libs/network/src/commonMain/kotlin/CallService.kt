@@ -1,7 +1,7 @@
 package org.szkug.keeting.network
 
 import okio.ByteString.Companion.toByteString
-import org.szkug.keeting.ProtocolServiceCall
+import org.szkug.keeting.common.call.ProtocolServiceCall
 
 
 interface CallService {

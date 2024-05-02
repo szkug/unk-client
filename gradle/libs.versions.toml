@@ -35,6 +35,10 @@ ktor-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
 ktor-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 ktor-loging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
 
+# kr[c
+krpc-schema = { group = "org.szkug.krpc", name = "schema"}
+krpc-runtime = { group = "org.szkug.krpc", name = "runtime"}
+
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
@@ -43,5 +47,7 @@ compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" 
 
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+
+properties-build-network = { id= "org.szkug.keeting.local.properties.build.network", version = "unspecified"}
 
 [bundles]

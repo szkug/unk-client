@@ -25,7 +25,7 @@ plugins {
 
 
 // project setting
-rootProject.name = "ketting-client"
+rootProject.name = "keeting-client"
 
 // gradle feature
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
@@ -35,9 +35,12 @@ includeBuild("builds")
 includeBuild("krpc-wire-plugin") {
     dependencySubstitution {
         substitute(module("org.szkug.krpc:schema")).using(project(":wire-schema"))
+        substitute(module("org.szkug.krpc:runtime")).using(project(":krpc-runtime"))
     }
 }
 
 
 // module include
 include("libs:network")
+
+include("domain:repositories")
