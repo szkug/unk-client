@@ -2,7 +2,6 @@ package org.szkug.keeting.network
 
 import org.szkug.keeting.common.active.ActiveService
 import org.szkug.keeting.common.active.KrpcActiveService
-import org.szkug.keeting.domain.LocalProperties
 import kotlin.properties.Delegates
 
 private data class NetHost(

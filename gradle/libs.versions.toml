@@ -48,7 +48,7 @@ compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" 
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 
-properties-build-network = { id= "org.szkug.keeting.local.properties.build.network", version = "unspecified"}
+properties = { id= "org.szkug.keeting.local.properties", version = "unspecified"}
 kmp-lib = { id= "org.szkug.keeting.kmp.lib", version = "unspecified"}
 
 [bundles]

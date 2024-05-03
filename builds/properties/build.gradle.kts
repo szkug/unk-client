@@ -13,9 +13,9 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("networkLocalBuildPropertiesPlugin") {
-            id = "org.szkug.keeting.local.properties.build.network"
-            implementationClass = "NetworkLocalBuildPropertiesPlugin"
+        register("localPropertiesBuildPlugin") {
+            id = "org.szkug.keeting.local.properties"
+            implementationClass = "LocalPropertiesBuildPlugin"
         }
     }
 }

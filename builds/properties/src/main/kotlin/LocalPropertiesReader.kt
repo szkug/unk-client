@@ -3,7 +3,6 @@ import org.gradle.api.Project
 import org.jetbrains.kotlin.gradle.internal.ensureParentDirsCreated
 import java.io.File
 import java.util.Properties
-import kotlin.io.path.createDirectories
 import kotlin.io.path.div
 
 private const val PROPERTIES_FILE_NAME = "local.properties"
@@ -13,22 +12,23 @@ class LocalPropertiesReader(private val project: Project) {
 
     // property name - field name
     fun build(
-        vararg reads: Pair<String, String>
+        extension: LocalPropertiesExtension
     ) {
 
-        val group = project.group as String
-        check(group.isNotBlank())
+        println("LocalPropertiesReader build ${extension.properties}")
+
+        check(extension.packageName.isNotBlank())
 
         val properties = Properties()
         properties.load(project.rootProject.file(PROPERTIES_FILE_NAME).reader())
 
         val values = mutableMapOf<String, String>()
 
-        reads.forEach {
-            values[it.second] = properties.getProperty(it.first)
+        extension.properties.forEach {
+            values[it.value] = properties.getProperty(it.key)
         }
 
-        val clasName = ClassName(group, "LocalProperties")
+        val clasName = ClassName(extension.packageName, "LocalProperties")
 
         val clazz = TypeSpec.objectBuilder(clasName).apply {
             values.forEach { (name, value) ->
