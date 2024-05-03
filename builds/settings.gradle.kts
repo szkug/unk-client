@@ -17,3 +17,4 @@ pluginManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 include("properties")
+include("module")

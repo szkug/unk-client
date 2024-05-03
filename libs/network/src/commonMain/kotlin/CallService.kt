@@ -2,11 +2,10 @@ package org.szkug.keeting.network
 
 import okio.ByteString.Companion.toByteString
 import org.szkug.keeting.common.call.ProtocolServiceCall
+import org.szkug.krpc.service.Call
 
 
-interface CallService {
-
-    suspend fun call(serviceName: String, funcName: String, request: ByteArray): ByteArray
+interface CallService : Call {
 
     companion object Factory {
         fun get(host: String): CallService = KrpcService(host)
@@ -20,11 +19,11 @@ private class KrpcService(val host: String) : CallService {
 
     private val handler = RequestHandler.get()
 
-    override suspend fun call(serviceName: String, funcName: String, request: ByteArray): ByteArray {
+    override suspend operator fun invoke(serviceName: String, functionName: String, requestData: ByteArray): ByteArray {
         val call = ProtocolServiceCall(
             service_name = serviceName,
-            call_function = funcName,
-            placeholder = request.toByteString()
+            call_function = functionName,
+            placeholder = requestData.toByteString()
         )
         val url = host + CALL_PATH
         return handler.handle(url, call.encode())

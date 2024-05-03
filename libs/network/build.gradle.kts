@@ -1,6 +1,6 @@
 
 plugins {
-    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.kmp.lib)
     alias(krpcLibs.plugins.wire)
 }
 
@@ -22,12 +22,6 @@ wire {
 
 
 kotlin {
-
-    jvm() // MARK: jvm target could be desktop & android library
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
-
     sourceSets {
         iosMain.dependencies {
             implementation(libs.ktor.cio)

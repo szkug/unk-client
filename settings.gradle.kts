@@ -41,6 +41,11 @@ includeBuild("krpc-wire-plugin") {
 
 
 // module include
+// libs
 include("libs:network")
 
+// domain
 include("domain:repositories")
+
+// feature
+include("feature:account")
