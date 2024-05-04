@@ -17,6 +17,7 @@ ktor = "2.3.7"
 koin = "3.2.0"
 [libraries]
 # Kotlin
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 
@@ -28,6 +29,7 @@ compose-activity = { group = "androidx.activity", name = "activity-compose", ver
 # Android
 agp = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+
 
 # Ktor
 ktor-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
