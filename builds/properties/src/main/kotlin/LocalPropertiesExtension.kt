@@ -1,5 +1,5 @@
 import org.gradle.api.Project
-import java.util.Properties
+import java.util.*
 import kotlin.io.path.div
 
 private const val PROPERTIES_FILE_NAME = "local.properties"
