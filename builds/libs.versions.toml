@@ -1,11 +1,13 @@
 [versions]
 kotlin = "1.9.23"
 kotlinpoet = "1.16.0"
+agp = "8.2.0"
 [libraries]
 
 kotlinpoet = { group = "com.squareup", name = "kotlinpoet", version.ref = "kotlinpoet" }
 
-kotlin-gradle-Plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-plugin-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-plugin-android = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

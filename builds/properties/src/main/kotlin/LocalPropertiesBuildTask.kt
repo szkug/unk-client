@@ -1,26 +1,34 @@
 import com.squareup.kotlinpoet.*
-import org.gradle.api.Project
+import org.apache.tools.ant.taskdefs.Move
+import org.gradle.api.DefaultTask
+import org.gradle.api.file.ConfigurableFileCollection
+import org.gradle.api.file.DirectoryProperty
+import org.gradle.api.file.FileTree
+import org.gradle.api.internal.file.FileOperations
+import org.gradle.api.provider.ListProperty
+import org.gradle.api.model.ObjectFactory
+import org.gradle.api.tasks.*
+import org.gradle.internal.impldep.org.apache.maven.model.InputLocation
 import org.jetbrains.kotlin.gradle.internal.ensureParentDirsCreated
-import java.io.File
-import java.util.Properties
-import kotlin.io.path.div
+import org.gradle.api.provider.Property
 
-private const val PROPERTIES_FILE_NAME = "local.properties"
-private const val OUTPUT_DIR = "generated"
 
-class LocalPropertiesReader(private val project: Project) {
+@CacheableTask
+abstract class LocalPropertiesBuildTask : DefaultTask() {
 
-    // property name - field name
-    fun build(
-        extension: LocalPropertiesExtension
-    ) {
+    @get:Input
+    abstract val extension: Property<LocalPropertiesExtension>
 
-        println("LocalPropertiesReader build ${extension.properties}")
+    @TaskAction
+    fun build() {
+
+        val extension = extension.get()
+
+        println("LocalPropertiesBuildTask build ${extension.properties}")
 
         check(extension.packageName.isNotBlank())
 
-        val properties = Properties()
-        properties.load(project.rootProject.file(PROPERTIES_FILE_NAME).reader())
+        val properties = extension.readLocalProperties()
 
         val values = mutableMapOf<String, String>()
 
@@ -41,8 +49,7 @@ class LocalPropertiesReader(private val project: Project) {
 
         val fileSpec = FileSpec.builder(clasName).addType(clazz).build()
 
-        val path = project.layout.buildDirectory.asFile.get().toPath() /
-                OUTPUT_DIR
+        val path = extension.outputPath()
 
         val file = path.toFile()
         file.ensureParentDirsCreated()

@@ -7,7 +7,8 @@ kotlin {
 }
 
 dependencies {
-    compileOnly(libs.kotlin.gradle.plugin)
+    compileOnly(libs.gradle.plugin.kotlin)
+    compileOnly(libs.gradle.plugin.android)
     implementation(libs.kotlinpoet)
 }
 

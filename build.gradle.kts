@@ -32,6 +32,7 @@ subprojects {
         kotlinOptions.freeCompilerArgs += "-Xcontext-receivers"
         kotlinOptions.freeCompilerArgs += "-opt-in=kotlin.ExperimentalStdlibApi"
 
+        source()
         // https://youtrack.jetbrains.com/issue/KT-61573
         //  kotlinOptions.freeCompilerArgs += "-Xexpect-actual-classes"
     }
