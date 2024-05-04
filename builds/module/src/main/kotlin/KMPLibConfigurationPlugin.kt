@@ -21,6 +21,12 @@ class KMPLibConfigurationPlugin : Plugin<Project> {
             iosX64()
             iosArm64()
             iosSimulatorArm64()
+
+            sourceSets.apply {
+                commonMain.dependencies {
+                    implementation(project(":libs:common"))
+                }
+            }
         }
     }
 }

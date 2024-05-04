@@ -15,7 +15,7 @@ val buildLocal = layout.buildDirectory.asFile.get()
 wire {
     sourcePath {
         srcDir("../../protocol")
-        include("account/rpc")
+        include("account/rpc/**")
     }
     custom {
         schemaHandlerFactory = org.szkug.krpc.plugin.KrpcSchemaHandlerFactory.client()

@@ -14,7 +14,7 @@ compose-android-activity = "1.8.2"
 
 
 ktor = "2.3.7"
-
+koin = "3.2.0"
 [libraries]
 # Kotlin
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
@@ -38,6 +38,10 @@ ktor-loging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "
 # krpc
 krpc-schema = { group = "org.szkug.krpc", name = "schema"}
 krpc-runtime = { group = "org.szkug.krpc", name = "runtime"}
+
+# Inject
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

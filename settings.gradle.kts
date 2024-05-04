@@ -42,6 +42,7 @@ includeBuild("krpc-wire-plugin") {
 
 // module include
 // libs
+include("libs:common")
 include("libs:network")
 
 // data

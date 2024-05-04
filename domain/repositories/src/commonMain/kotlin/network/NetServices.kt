@@ -1,7 +1,13 @@
 package org.szkug.keeting.network
 
+import org.szkug.keeting.common.Env
 import org.szkug.keeting.common.active.ActiveService
 import org.szkug.keeting.common.active.KrpcActiveService
+import org.szkug.keeting.common.inject.InjectUtil
+import org.szkug.keeting.common.inject.lazy
+import org.szkug.keeting.login.KrpcLoginService
+import org.szkug.krpc.service.Service
+import org.szkug.krpc.service.ServiceFactory
 import kotlin.properties.Delegates
 
 private data class NetHost(
@@ -18,10 +24,13 @@ private val MAIN_HOST = NetHost(
 
 object NetServices {
 
-    var debug by Delegates.notNull<Boolean>()
+    private val env by InjectUtil.lazy<Env>()
 
-    private val mainCall by lazy { CallService.get(MAIN_HOST.get(debug)) }
+    private val MAIN_CALL by lazy { CallService.get(MAIN_HOST.get(env.debug)) }
 
-    fun active(): ActiveService = KrpcActiveService(mainCall)
+    private infix fun <S: Service> ServiceFactory<S>.by(call: CallService) = create(call)
 
+    fun active() = KrpcActiveService.Factory by MAIN_CALL
+
+    fun login() = KrpcLoginService.Factory by MAIN_CALL
 }
