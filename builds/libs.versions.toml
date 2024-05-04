@@ -2,12 +2,17 @@
 kotlin = "1.9.23"
 kotlinpoet = "1.16.0"
 agp = "8.2.0"
+wire = "4.9.3"
 [libraries]
 
 kotlinpoet = { group = "com.squareup", name = "kotlinpoet", version.ref = "kotlinpoet" }
 
 gradle-plugin-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-plugin-android = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+gradle-plugin-wire = { group ="com.squareup.wire", name="wire-gradle-plugin", version.ref = "wire" }
+
+wire-schema = { module = "com.squareup.wire:wire-schema", version.ref = "wire"}
+krpc-schema = { group = "org.szkug.krpc", name = "schema"}
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
