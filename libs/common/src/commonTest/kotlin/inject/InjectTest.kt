@@ -1,6 +1,7 @@
 package inject
 
 import org.szkug.keeting.common.Env
+import org.szkug.keeting.common.PlatformContext
 import org.szkug.keeting.common.inject.InjectUtil
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -13,7 +14,11 @@ class InjectTest {
     @BeforeTest
     fun init() {
         InjectUtil.init {
-            single { Env(true) }
+            single { Env(
+                true,
+                PlatformContext(null)
+            ) }
+
         }
     }
 
