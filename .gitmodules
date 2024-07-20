@@ -4,5 +4,5 @@
 	branch = dev/keeting
 [submodule "protocol"]
 	path = protocol
-	url = https://github.com/szkug/keeting-protocol.git
+	url = https://github.com/szkug/unk-pb.git
 	branch = dev
