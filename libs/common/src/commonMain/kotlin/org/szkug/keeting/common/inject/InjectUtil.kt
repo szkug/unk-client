@@ -1,4 +1,4 @@
-package org.szkug.keeting.common.inject
+package org.szkug.unk.common.inject
 
 import kotlin.reflect.KClass
 

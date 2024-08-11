@@ -1,4 +1,4 @@
-package org.szkug.keeting.common
+package org.szkug.unk.common
 
 data class Env(
     val debug: Boolean,

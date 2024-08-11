@@ -19,7 +19,7 @@ wire {
 }
 
 localProperties {
-    packageName = "org.szkug.keeting.network"
+    packageName = "org.szkug.unk.network"
     properties = mapOf(
         "network.host.dev" to "DEV_HOST",
         "network.host.release" to "RELEASE_HOST"

@@ -1,4 +1,4 @@
-package org.szkug.keeting.network
+package org.szkug.unk.network
 
 import io.ktor.client.call.*
 import io.ktor.client.request.*

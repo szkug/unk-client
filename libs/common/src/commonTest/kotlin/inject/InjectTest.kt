@@ -1,8 +1,8 @@
 package inject
 
-import org.szkug.keeting.common.Env
-import org.szkug.keeting.common.PlatformContext
-import org.szkug.keeting.common.inject.InjectUtil
+import org.szkug.unk.common.Env
+import org.szkug.unk.common.PlatformContext
+import org.szkug.unk.common.inject.InjectUtil
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 

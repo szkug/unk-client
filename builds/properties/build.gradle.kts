@@ -15,7 +15,7 @@ dependencies {
 gradlePlugin {
     plugins {
         register("localPropertiesBuildPlugin") {
-            id = "org.szkug.keeting.local.properties"
+            id = "org.szkug.unk.local.properties"
             implementationClass = "LocalPropertiesBuildPlugin"
         }
     }

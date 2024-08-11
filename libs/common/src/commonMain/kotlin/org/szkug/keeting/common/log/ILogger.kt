@@ -1,6 +1,6 @@
-package org.szkug.keeting.common.log
+package org.szkug.unk.common.log
 
-import org.szkug.keeting.common.PlatformContext
+import org.szkug.unk.common.PlatformContext
 
 
 enum class LogLevel {

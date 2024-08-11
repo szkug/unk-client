@@ -18,13 +18,13 @@ dependencies {
 gradlePlugin {
     plugins {
         register("KMPLibConfigurationPlugin") {
-            id = "org.szkug.keeting.kmp.lib"
+            id = "org.szkug.unk.kmp.lib"
             implementationClass = "KMPLibConfigurationPlugin"
         }
     }
     plugins {
         register("WireConfigurationPlugin") {
-            id = "org.szkug.keeting.krpc"
+            id = "org.szkug.unk.krpc"
             implementationClass = "WireConfigurationPlugin"
         }
     }

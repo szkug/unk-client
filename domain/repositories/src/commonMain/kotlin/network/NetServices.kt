@@ -1,9 +1,9 @@
-package org.szkug.keeting.network
+package org.szkug.unk.network
 
-import org.szkug.keeting.common.Env
-import org.szkug.keeting.common.active.KrpcActiveService
-import org.szkug.keeting.common.inject.InjectUtil
-import org.szkug.keeting.login.KrpcLoginService
+import org.szkug.unk.common.Env
+import org.szkug.unk.common.active.KrpcActiveService
+import org.szkug.unk.common.inject.InjectUtil
+import org.szkug.unk.login.KrpcLoginService
 import org.szkug.krpc.service.Service
 import org.szkug.krpc.service.ServiceFactory
 import kotlin.properties.Delegates

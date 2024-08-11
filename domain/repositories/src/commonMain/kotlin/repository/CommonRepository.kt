@@ -1,7 +1,7 @@
-package org.szkug.keeting.repository
+package org.szkug.unk.repository
 
-import org.szkug.keeting.common.active.ActiveReq
-import org.szkug.keeting.network.NetServices
+import org.szkug.unk.common.active.ActiveReq
+import org.szkug.unk.network.NetServices
 
 interface CommonRepository {
 

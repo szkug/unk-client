@@ -1,7 +1,7 @@
 [submodule "krpc-wire-plugin"]
-	path = krpc-wire-plugin
+	path = krpc
 	url = https://github.com/szkug/krpc-wire-plugin.git
-	branch = dev/keeting
+	branch = provide/unk
 [submodule "protocol"]
 	path = protocol
 	url = https://github.com/szkug/unk-pb.git

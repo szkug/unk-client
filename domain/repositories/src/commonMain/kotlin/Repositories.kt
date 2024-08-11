@@ -1,5 +1,5 @@
 // root object to occupy package name
-package org.szkug.keeting
+package org.szkug.unk
 
 internal object Repositories {
 

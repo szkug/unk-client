@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "org.szkug.keeting.common"
+    namespace = "org.szkug.unk.common"
 }
 
 kotlin {

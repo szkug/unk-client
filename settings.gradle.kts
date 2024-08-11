@@ -2,7 +2,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         versionCatalogs {
             create("krpcLibs") {
-                from(files("krpc-wire-plugin/gradle/libs.versions.toml"))
+                from(files("krpc/gradle/libs.versions.toml"))
             }
         }
     }
@@ -25,14 +25,14 @@ plugins {
 
 
 // project setting
-rootProject.name = "keeting-client"
+rootProject.name = "unk-client"
 
 // gradle feature
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 // build logic
 includeBuild("builds")
-includeBuild("krpc-wire-plugin") {
+includeBuild("krpc") {
     dependencySubstitution {
         substitute(module("org.szkug.krpc:schema")).using(project(":wire-schema"))
         substitute(module("org.szkug.krpc:runtime")).using(project(":krpc-runtime"))

@@ -1,7 +1,7 @@
-package org.szkug.keeting.network
+package org.szkug.unk.network
 
 import okio.ByteString.Companion.toByteString
-import org.szkug.keeting.common.call.ProtocolServiceCall
+import org.szkug.unk.common.call.ProtocolServiceCall
 import org.szkug.krpc.service.Call
 
 
