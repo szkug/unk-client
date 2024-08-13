@@ -1,17 +1,7 @@
-dependencyResolutionManagement {
-    versionCatalogs {
-        versionCatalogs {
-            create("krpcLibs") {
-                from(files("krpc/gradle/libs.versions.toml"))
-            }
-        }
-    }
-}
-
-
 pluginManagement {
     repositories {
         google()
+        mavenLocal()
         mavenCentral()
         gradlePluginPortal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
@@ -32,13 +22,6 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 // build logic
 includeBuild("builds")
-includeBuild("krpc") {
-    dependencySubstitution {
-        substitute(module("org.szkug.krpc:schema")).using(project(":wire-schema"))
-        substitute(module("org.szkug.krpc:runtime")).using(project(":krpc-runtime"))
-    }
-}
-
 
 // module include
 // libs

@@ -12,9 +12,9 @@ compose = "1.5.13"
 compose-android-bom = "2024.04.01"
 compose-android-activity = "1.8.2"
 
-
 ktor = "2.3.7"
-koin = "3.2.0"
+krpc = "1.0.0-unk1"
+
 [libraries]
 # Kotlin
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -30,21 +30,11 @@ compose-activity = { group = "androidx.activity", name = "activity-compose", ver
 agp = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
 
-
 # Ktor
 ktor-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
 ktor-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
 ktor-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 ktor-loging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
-
-# krpc
-krpc-schema = { group = "org.szkug.krpc", name = "schema"}
-krpc-runtime = { group = "org.szkug.krpc", name = "runtime"}
-
-# Inject
-# Fuck Koin no provide method passing KClass paramater to implement inject interface
-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -55,8 +45,9 @@ compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" 
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 
+krpc = { id= "cn.szkug.krpc", version.ref = "krpc"}
+
 properties = { id= "org.szkug.unk.local.properties", version = "unspecified"}
 kmp-lib = { id= "org.szkug.unk.kmp.lib", version = "unspecified"}
-krpc = { id= "org.szkug.unk.krpc", version = "unspecified"}
 
 [bundles]
