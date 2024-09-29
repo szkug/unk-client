@@ -1,6 +1,6 @@
 
 plugins {
-    alias(libs.plugins.kmp.lib)
+    alias(libs.plugins.unk.kmp.lib)
     alias(libs.plugins.krpc)
 }
 

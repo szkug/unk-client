@@ -1,7 +1,7 @@
 
 plugins {
-    alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.unk.kmp.lib)
+    alias(libs.plugins.unk.android.lib)
 }
 
 android {
@@ -9,12 +9,7 @@ android {
 }
 
 kotlin {
-    jvm() // MARK: jvm target could be desktop & android library
     androidTarget()
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
-    applyDefaultHierarchyTemplate()
     sourceSets {
         iosMain.dependencies {
         }

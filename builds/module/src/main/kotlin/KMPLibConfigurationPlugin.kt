@@ -7,11 +7,11 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
  * @PluginId org.szkug.unk.kmp.lib
  */
 class KMPLibConfigurationPlugin : Plugin<Project> {
+
     override fun apply(target: Project) = with(target) {
         configPlugin()
         configExtension()
     }
-
 
     private fun Project.configPlugin() = with(pluginManager) {
         apply("org.jetbrains.kotlin.multiplatform")
@@ -26,8 +26,8 @@ class KMPLibConfigurationPlugin : Plugin<Project> {
             iosSimulatorArm64()
 
             sourceSets.apply {
-                commonMain.dependencies {
-                    implementation(project(":libs:common"))
+                commonTest.dependencies {
+                    implementation(versionCatalog.getLib("kotlin-test"))
                 }
             }
         }

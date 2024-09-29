@@ -1,7 +1,6 @@
 plugins {
-    alias(libs.plugins.kmp.lib)
+    alias(libs.plugins.unk.kmp.lib)
     alias(libs.plugins.krpc)
-    alias(libs.plugins.properties)
 }
 
 dependencies {
@@ -16,14 +15,6 @@ wire {
     protoPath {
         srcDir("../../protocol")
     }
-}
-
-localProperties {
-    packageName = "org.szkug.unk.network"
-    properties = mapOf(
-        "network.host.dev" to "DEV_HOST",
-        "network.host.release" to "RELEASE_HOST"
-    )
 }
 
 kotlin {

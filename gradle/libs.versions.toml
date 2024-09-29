@@ -48,6 +48,8 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 krpc = { id= "cn.szkug.krpc", version.ref = "krpc"}
 
 properties = { id= "org.szkug.unk.local.properties", version = "unspecified"}
-kmp-lib = { id= "org.szkug.unk.kmp.lib", version = "unspecified"}
+
+unk-kmp-lib = { id= "org.szkug.unk.kmp.lib", version = "unspecified"}
+unk-android-lib = { id= "org.szkug.unk.android.lib", version = "unspecified"}
 
 [bundles]
