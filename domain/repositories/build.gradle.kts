@@ -26,6 +26,7 @@ kotlin {
         commonMain.dependencies {
             implementation(projects.libs.network)
             implementation(projects.data.protocol)
+            implementation(projects.libs.common)
         }
     }
 }
