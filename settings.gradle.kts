@@ -36,3 +36,4 @@ include("domain:repositories")
 
 // feature
 include("feature:account")
+include("feature:punch")
